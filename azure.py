@@ -1,7 +1,7 @@
 # Bill Zhou
 # Script to genetare multiple .TF files
 # Input file input.json
-# Syntax: python azure.py
+# Syntax: python3 azure.py
 # 11/01/2024
 
 from jinja2 import Environment, FileSystemLoader
