@@ -1,22 +1,33 @@
+# Bill Zhou
+# Script to genetare multiple .TF files
+# Input file input.json
+# Syntax: python azure.py
+# 11/01/2024
+
 from jinja2 import Environment, FileSystemLoader
 
-azure = [
-    {"name": "azure1",  "location": "east-us-1", "address": "10.10.124.73"},
-    {"name": "azure2",  "location": "east-us-2", "address": "10.10.124.74"},
-    {"name": "azure3",  "location": "east-us-3", "address": "10.10.124.75"},
-    {"name": "azure4",  "location": "east-west-1", "address": "10.10.124.77"},
-    {"name": "azure5",  "location": "east-west-2", "address": "10.10.124.78"},
-    {"name": "azure6",  "location": "east-west-3", "address": "10.10.124.79"},
-]
+import os
+import json
+import numpy as np
 
-environment = Environment(loader=FileSystemLoader("template/"))
-template = environment.get_template("main.tf")
+with open("input.json", "r") as file:
+  data = json.load(file)
+  arr = np.atleast_1d(data)
+  print (arr)
 
-for data in azure:
-    filename = f"{data['name'].lower()}.tf"
+
+environment = Environment(loader=FileSystemLoader("templates/"))
+template = environment.get_template("locals.tf")
+
+directory_name = "Output"
+print(directory_name)
+os.chdir(directory_name)
+
+for element in data:
+    filename = f"{element['app_id']}.tf"
     content = template.render(
-        data,
+        element,
     )
     with open(filename, mode="w", encoding="utf-8") as message:
-        message.write(content)
-        print(f"... wrote {filename}")
+         message.write(content)
+         print(f"... wrote {filename}")
