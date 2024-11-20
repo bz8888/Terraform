@@ -11,7 +11,7 @@ module "wf_app_landing_zone_TESTDEV" {
 
   tags = {
   
-    app_guid   = ""
+    app_guid   = "123456789"
     au         = "123456"
     data_classification = "internal"
    }

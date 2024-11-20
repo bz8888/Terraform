@@ -11,7 +11,7 @@ module "wf_app_landing_zone_CIBRW" {
 
   tags = {
   
-    app_guid   = ""
+    app_guid   = "123456699"
     au         = "123452"
     data_classification = "internal"
    }

@@ -1,8 +1,8 @@
 [
 
-    {"app_id": "TESTDEV", "platform_env": "sandbox", "art_request_id": "1234356", "app_guid": "123456789", "au": "123456", "data_classification": "internal"},
-    {"app_id": "VAS", "platform_env": "nonprod", "art_request_id": "1234356", "app_guid": "123456799", "au": "123454", "data_classification": "internal"},
-    {"app_id": "CIBRW", "platform_env": "nonprod", "art_request_id": "1234356", "app_guid": "123456699", "au": "123452", "data_classification": "internal"}
+    {"app_id": "TESTDEV", "platform_env": "sandbox", "art_request_id": "1234356", "app_guide": "123456789", "au": "123456", "data_classification": "internal"},
+    {"app_id": "VAS", "platform_env": "nonprod", "art_request_id": "1234356", "app_guide": "123456799", "au": "123454", "data_classification": "internal"},
+    {"app_id": "CIBRW", "platform_env": "nonprod", "art_request_id": "1234356", "app_guide": "123456699", "au": "123452", "data_classification": "internal"}
 
 
 

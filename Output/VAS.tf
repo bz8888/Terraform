@@ -11,7 +11,7 @@ module "wf_app_landing_zone_VAS" {
 
   tags = {
   
-    app_guid   = ""
+    app_guid   = "123456799"
     au         = "123454"
     data_classification = "internal"
    }
